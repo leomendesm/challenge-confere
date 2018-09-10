@@ -6,6 +6,7 @@ import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import reducers from './redux-flow/reducers'
+import SpaceForm from './containers/SpaceForm'
 
 const store = createStore(
 	reducers,
@@ -19,6 +20,7 @@ class App extends Component {
 		return (
 			<Provider store={store}>
 				<div className="App">
+				<SpaceForm />
 				</div>
 			</Provider>
 		)
