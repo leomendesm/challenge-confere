@@ -1,10 +1,8 @@
 import React from 'react'
-import Select from '../components/Select'
-import Field from '../components/Field'
+import {Select, Field} from '../components'
 import { connect } from 'react-redux'
 import FetchSpaceData, { SetSpaceOption } from '../redux-flow/reducers/spaces/action-creators'
 import FetchSectionData from '../redux-flow/reducers/sections/action-creators'
-
 
 class SpaceForm extends React.Component {
     componentWillMount(){

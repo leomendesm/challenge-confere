@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import Card from '../components/Card'
+import { Card } from '../components'
 import {connect} from 'react-redux'
+
 const List = styled.div`
     margin-top: 20px;
     width: 80%;
@@ -30,8 +31,6 @@ const mapStateToProps = state => ({
     contents: state.contents
 })
 
-const mapDispatchToProps = dispatch => ({
-
-})
+const mapDispatchToProps = dispatch => ({})
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContentList)

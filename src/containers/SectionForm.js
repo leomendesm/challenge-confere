@@ -1,6 +1,5 @@
 import React from 'react'
-import Select from '../components/Select'
-import Field from '../components/Field'
+import { Select, Field } from '../components'
 import { connect } from 'react-redux'
 import FetchContentData from '../redux-flow/reducers/contents/action-creators'
 
