@@ -1,10 +1,11 @@
-import { FETCHING_SPACE_DATA, FETCHING_SPACE_DATA_SUCCESS, FETCHING_SPACE_DATA_FAIL } from './actions'
+import { FETCHING_SPACE_DATA, FETCHING_SPACE_DATA_SUCCESS, FETCHING_SPACE_DATA_FAIL, SELECT_SPACE_OPTION } from './actions'
 
 export const initialState = {
     isFetching: null,
     data: [],
     hasError: false,
     errorMessage: null,
+    selectedOption: null
 }
 
 const space = (state = initialState, action) => {
@@ -23,6 +24,10 @@ const space = (state = initialState, action) => {
                 data: action.payload,
                 hasError: false,
                 errorMessage: null
+            })
+        case SELECT_SPACE_OPTION:
+            return Object.assign({}, state, {
+                selectedOption: action.payload
             })
 
         case FETCHING_SPACE_DATA_FAIL:

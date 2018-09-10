@@ -1,5 +1,5 @@
 import space, { initialState } from './index'
-import { FETCHING_SPACE_DATA, FETCHING_SPACE_DATA_SUCCESS, FETCHING_SPACE_DATA_FAIL } from './actions'
+import { FETCHING_SPACE_DATA, FETCHING_SPACE_DATA_SUCCESS, FETCHING_SPACE_DATA_FAIL, SELECT_SPACE_OPTION } from './actions'
 import deepFreeze from 'deep-freeze'
 
 describe('Space reducer', () => {
@@ -35,7 +35,8 @@ describe('Space reducer', () => {
                 isFetching: true,
                 data: null,
                 hasError: false,
-                errorMessage: null
+                errorMessage: null,
+                selectedOption: null
             }
             expect(space(before, action)).toEqual(after);
         })
@@ -47,7 +48,8 @@ describe('Space reducer', () => {
                 isFetching: false,
                 data: ['a'],
                 hasError: false,
-                errorMessage: null
+                errorMessage: null,
+                selectedOption: null
             }
             expect(space(before, action)).toEqual(after);
         })
@@ -59,7 +61,21 @@ describe('Space reducer', () => {
                 isFetching: false,
                 data: null,
                 hasError: true,
-                errorMessage: '404'
+                errorMessage: '404',
+                selectedOption: null
+            }
+            expect(space(before, action)).toEqual(after);
+        })
+
+        it('should change select option when SELECT_SPACE_OPTION is called with a payload', () => {
+            const before = deepFreeze(initialState)
+            const action = deepFreeze({ type: SELECT_SPACE_OPTION, payload: 'a' })
+            const after = {
+                isFetching: null,
+                data: [],
+                hasError: false,
+                errorMessage: null,
+                selectedOption: 'a'
             }
             expect(space(before, action)).toEqual(after);
         })
