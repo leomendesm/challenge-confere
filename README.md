@@ -7,7 +7,7 @@ Para rodar o projeto será necessário possuir:
 - NPM ou Yarn(recomendado)
 ## Instalação
 Para instalar o projeto, clone esse repositório com o comando: 
-### `git clone https://github.com/leomendesm/test-confere`
+### `git clone https://github.com/leomendesm/challenge-confere`
 Entre na pasta com o comando: 
 ### `cd stone` 
 E instale as dependências do projeto com o comando:
