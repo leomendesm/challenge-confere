@@ -12,7 +12,7 @@ it('should dispatch two times with success', () => {
     
     FetchSectionData(dispatch, id)
 
-    expect(mockAxios.get).toHaveBeenCalledWith(`${APIURL}v2/spaces/${id}/sections`, config)
+    expect(mockAxios.get).toHaveBeenCalledWith(`${APIURL}v1/spaces/${id}/sections`, config)
     expect(dispatch).toHaveBeenCalledWith({"type": "FETCHING_SECTION_DATA"});
 
     let responseObj = { data: 'test' }
@@ -29,7 +29,7 @@ it('should dispatch two times with fail', () => {
     
     FetchSectionData(dispatch, id)
 
-    expect(mockAxios.get).toHaveBeenCalledWith(`${APIURL}v2/spaces/${id}/sections`, config)
+    expect(mockAxios.get).toHaveBeenCalledWith(`${APIURL}v1/spaces/${id}/sections`, config)
     expect(dispatch).toHaveBeenCalledWith({"type": "FETCHING_SECTION_DATA"});
 
     let responseObj = {msg: 'err'}

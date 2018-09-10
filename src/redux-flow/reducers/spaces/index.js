@@ -1,4 +1,3 @@
-require('dotenv').config()
 import { FETCHING_SPACE_DATA, FETCHING_SPACE_DATA_SUCCESS, FETCHING_SPACE_DATA_FAIL } from './actions'
 
 export const initialState = {

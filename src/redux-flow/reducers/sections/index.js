@@ -1,4 +1,3 @@
-require('dotenv').config()
 import { FETCHING_SECTION_DATA, FETCHING_SECTION_DATA_SUCCESS, FETCHING_SECTION_DATA_FAIL } from './actions'
 
 export const initialState = {
