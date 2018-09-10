@@ -9,7 +9,7 @@ Para rodar o projeto será necessário possuir:
 Para instalar o projeto, clone esse repositório com o comando: 
 ### `git clone https://github.com/leomendesm/challenge-confere`
 Entre na pasta com o comando: 
-### `cd stone` 
+### `cd challenge-confere` 
 E instale as dependências do projeto com o comando:
 ### `yarn`
 ou
